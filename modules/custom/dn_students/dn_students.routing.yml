@@ -1,0 +1,7 @@
+dn_students.studentform:
+  path: '/studentform'
+  defaults:
+    _title: 'Add Students'
+    _form: '\Drupal\dn_students\Form\StudentForm'
+  requirements:
+    _access: 'access administration pages'

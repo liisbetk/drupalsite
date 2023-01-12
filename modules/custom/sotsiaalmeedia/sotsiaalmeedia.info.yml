@@ -1,0 +1,4 @@
+name: "Sotsiaalmeedia"
+description: "Sotsiaalmeedia kuvamise moodul"
+type: module
+core_version_requirement: ^9.2 || ^10

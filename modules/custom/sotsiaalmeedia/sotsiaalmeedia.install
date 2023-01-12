@@ -1,0 +1,90 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+function sotsiaalmeedia_schema(){
+    $schema['sotsiaalmeedia_data'] = [
+        'description' => 'Data collection',
+        'fields' => [
+            'id' => [
+                'description' => 'Primary key',
+                'type' => 'serial',
+                'not null' => TRUE,
+                'unsigned' => TRUE,
+            ],
+
+            'facebook' => [
+                'description' => 'Social media network',
+                'type' => 'varchar',
+                'not null' => TRUE,
+                'default' => '',
+                'length' => 255,
+            ],
+            'linkedin' => [
+                'description' => 'Social media network',
+                'type' => 'varchar',
+                'not null' => TRUE,
+                'default' => '',
+                'length' => 255,
+            ],
+            'twitter' => [
+                'description' => 'Social media network',
+                'type' => 'varchar',
+                'not null' => TRUE,
+                'default' => '',
+                'length' => 255,
+            ],
+            'instagram' => [
+                'description' => 'Social media network',
+                'type' => 'varchar',
+                'not null' => TRUE,
+                'default' => '',
+                'length' => 255,
+            ],
+            'google' => [
+                'description' => 'Social media network',
+                'type' => 'varchar',
+                'not null' => TRUE,
+                'default' => '',
+                'length' => 255,
+            ],
+            'pinterest' => [
+                'description' => 'Social media network',
+                'type' => 'varchar',
+                'not null' => TRUE,
+                'default' => '',
+                'length' => 255,
+            ],
+            'youtube' => [
+                'description' => 'Social media network',
+                'type' => 'varchar',
+                'not null' => TRUE,
+                'default' => '',
+                'length' => 255,
+            ],
+            'snapchat' => [
+                'description' => 'Social media network',
+                'type' => 'varchar',
+                'not null' => TRUE,
+                'default' => '',
+                'length' => 255,
+            ],
+            'tiktok' => [
+                'description' => 'Social media network',
+                'type' => 'varchar',
+                'not null' => TRUE,
+                'default' => '',
+                'length' => 255,
+            ],
+        ],
+        'primary key' => [
+            'id',
+        ],
+        ];
+        return $schema;
+}
+
+function sotsiaalmeedia_update_01(){
+
+
+}

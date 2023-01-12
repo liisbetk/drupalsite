@@ -1,0 +1,4 @@
+services:
+  epic_social_media.db_manager:
+    class: Drupal\sotsiaalmeedia\DbManager
+    arguments: ['@database', '@datetime.time']

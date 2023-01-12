@@ -1,0 +1,7 @@
+name: DN Students
+type: module
+description: Module for learning database and form connection
+package: Custom
+version: 1.0
+core: 8.x
+core_version_requirement: ^9.2 || ^10
