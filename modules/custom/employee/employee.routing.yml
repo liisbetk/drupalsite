@@ -6,3 +6,28 @@ employee.createEmployee:
     _controller: 'Drupal\employee\Controller\EmployeeController::createEmployee'
   requirements:
     _permission: 'access content'
+
+
+employee.getEmployeeList:
+  path: '/employee-list'
+  defaults:
+    _controller: 'Drupal\employee\Controller\EmployeeController::getEmployeeList'
+  requirements:
+    _permission: 'access content'
+
+
+employee.editEmployee:
+  path: '/edit-Employee/{id}'
+  defaults:
+    _title: 'Edit employee'
+    _form: 'Drupal\employee\Form\EditEmployee'
+  requirements:
+    _permission: 'access content'
+
+employee.deleteEmployee:
+  path: '/delete-Employee/{id}'
+  defaults:
+    _title: 'Delete employee'
+    _controller: 'Drupal\employee\Controller\EmployeeController::deleteEmployee'
+  requirements:
+    _permission: 'access content'
