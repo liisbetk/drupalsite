@@ -4,6 +4,7 @@
 
     use Drupal\Core\Form\Formbase;
     use Drupal\Core\Form\FormStateInterface;
+    use Drupal\Core\Database\Database;
 
 class EmployeeForm extends Formbase{
 
@@ -32,6 +33,9 @@ class EmployeeForm extends Formbase{
             '#type' => 'textfield',
             '#title' => 'Name',
             '#default_value' => '',
+            '#attributes' => array(
+                'placeholder' => 'name'
+            )
         );
 
 
@@ -45,6 +49,9 @@ class EmployeeForm extends Formbase{
             '#type' => 'textfield',
             '#title' => 'job description',
             '#dedault_value' => '',
+            '#attributes' => array(
+                'placeholder' => 'Your job description'
+            )
         );
 
         $form['save'] = array(
@@ -82,9 +89,16 @@ class EmployeeForm extends Formbase{
       {
         $postData = $form_state->getValues();
 
-        echo '<pre>';
-        print_r($postData);
-        echo '</pre>';
-        exit;
+        $query = Database::getConnection();
+        $query->insert('employees')->fields(
+            array(
+                'name' => $form_state->getValue('name'),
+                'gender' => $form_state->getValue('gender'),
+                'about' => $form_state->getValue('about'),
+            )
+        )->execute();
+
+        $this->messenger()->addMessage('Data saved successfully!', 'status', TRUE);
+
       }
 }

@@ -1,0 +1,14 @@
+    <?php
+    //millegipärast peale .module faili tegemist enam ei tööta.
+/*
+        function employee_theme(){
+            return array(
+            'employee' => array(
+                'variables' => array(
+                    'items' => [],
+                    'title' => ''
+                )
+            )
+    );
+        }
+*/
