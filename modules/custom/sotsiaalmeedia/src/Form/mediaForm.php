@@ -10,7 +10,6 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use \Drupal\Core\Form\FormInterface;
 use \Drupal\Core\State\StateInterface;
-use Drupal\sotsiaalmeedia\DbManager;
 
 
 class mediaForm extends FormBase {

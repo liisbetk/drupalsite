@@ -1,7 +1,15 @@
+dn_students.helloWorld:
+  path: '/helloworld'
+  defaults:
+    _controller: '\Drupal\dn_students\Controller\studentsController::helloWorld'
+    _title: 'Controller'
+  requirements:
+    _permission: 'access content'
+
 dn_students.studentform:
   path: '/studentform'
   defaults:
     _title: 'Add Students'
     _form: '\Drupal\dn_students\Form\StudentForm'
   requirements:
-    _access: 'access administration pages'
+    _permission: 'access administration pages'

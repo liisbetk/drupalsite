@@ -669,6 +669,9 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 
 /**
  * Trusted host configuration.
+  $settings['trusted_host_patterns'] = [
+    '^localhost$'
+  ];
  *
  * Drupal core can use the Symfony trusted host mechanism to prevent HTTP Host
  * header spoofing.
@@ -680,9 +683,9 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  *
  * For example:
  * @code
- * $settings['trusted_host_patterns'] = [
- *   '^www\.example\.com$',
- * ];
+$settings['trusted_host_patterns'] = [
+  '^localhost$',
+];
  * @endcode
  * will allow the site to only run from www.example.com.
  *
