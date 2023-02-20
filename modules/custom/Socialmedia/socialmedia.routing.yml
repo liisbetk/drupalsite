@@ -1,0 +1,15 @@
+socialmedia.content:
+  path: '/my-socialmedia'
+  defaults:
+    _controller: '\Drupal\socialmedia\Controller\SocialmediaController::mediaLinks'
+    _title: 'My socialmedia links'
+  requirements:
+    _permission: 'access content'
+
+socialmedia.config:
+  path: '/admin/config/Social/config'
+  defaults:
+    _form: '\Drupal\socialmedia\Form\SocialmediaForm'
+    _title: 'Socialmedia configuration'
+  requirements:
+    _permission: 'administer site configuration'

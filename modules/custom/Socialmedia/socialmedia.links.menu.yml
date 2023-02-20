@@ -1,0 +1,6 @@
+socialmedia.admin:
+  title: 'socialmedia configuration'
+  description: 'Configure links'
+  parent: system.admin_config_development
+  route_name: socialmedia.config
+  weight: 100
